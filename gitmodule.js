@@ -36,7 +36,7 @@
   //region exposedFunctions
   gitmodule.pull = async function(base) {
     log("gitmodule.pull");
-    await git(base).pull();
+    await git(base).pull("origin", "master");
   };
 
   gitmodule.checkoutMaster = async function(base) {
