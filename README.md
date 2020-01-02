@@ -1,31 +1,88 @@
 # thingysync - Small helper tool to help syncronisation of our thingies using git 
 
 # Why?
+When dealing with multiple  levels of git submodules in a git repository I want to push and pull everything with one command.
+
+Also the idea is to have extended synchronisation functionality. A convenience layer actually using git. 
+
+Because I use git more for synchronisation and codesharing other than version control.
 
 # What?
+So this is the first version of thingysync.
+It has the capability to push and pull the whole thingystructure of submodules.
 
 # How?
 Requirements
 ------------
 
+* ssh-key access to your remote - ready in your shell
+* [Git installed](https://git-scm.com/)
+* [Node.js installed](https://nodejs.org/)
+
 Installation
 ------------
+Current git version
+```sh
+$ npm install -g git+https://github.com/JhonnyJason/thingsync-output.git
+```
 
+Npm Registry
+```
+$ npm install -g thingysync
+```
 
 Usage
 -----
+```sh
+    Usage 
+        $ thingysync <arg1> <arg2> <arg3>
 
+    Options
+        required:
+            arg1, --command <command> , -c <command>
+                command can either be "push" or "pull"
+
+        optional:
+            arg2, --path <path>, -p <path>
+                the path to the base repository (may be relative or absolute)
+            arg3, --message <message>, -m <message>
+                commit message when pushing
+                
+    Examples
+        $  thingysync pull ~/thingies/thingy-to-pull
+```
 
 Current Functionality
 ---------------------
+
+Currently we only know 2 commands - pull and push.
+
+## pull
+Here we will start at our `path` and actually do 
+```git pull origin master``` and ```git checkout master```
+on every level.
+
+The next levels are identified by looking at the `.gitmodules` file.
+
+## push
+For the `push` command we may provide a message also. If we don't provide a commit message it will default to be `"thingysync push"`.
+
+For pushing we start from our leaves back to our root `path` doing 
+```git checkout master``` then ```git add .``` then ```git commit "the message"``` and then ```git push origin master``` for every level.
+
+Also here the branches for the tree are identified by looking at the `.gitmodules` file.
+
 
 
 ---
 
 # Further steps
-
+- status command to print status summary of what is out of sync
+- status for multiple thingies
+- status vs related remotes
+- synchronisation with related remotes
+- maybe add branch flexibility?
 - ...
-
 
 All sorts of inputs are welcome, thanks!
 
