@@ -13,16 +13,16 @@
   //#############################################################################
   // console.log "debugmodule.initialize - nothing to do"
   debugmodule.modulesToDebug = {
-    unbreaker: true,
-    // cliargumentsmodule: true
-    // configmodule: true
-    gitmodule: true,
-    // mainprocessmodule: true
-    // pathhandlermodule: true
-    // pullcommandmodule: true
-    pushcommandmodule: true
+    unbreaker: true
   };
 
+  // cliargumentsmodule: true
+  // configmodule: true
+  // gitmodule: true
+  // mainprocessmodule: true
+  // pathhandlermodule: true
+  // pullcommandmodule: true
+  // pushcommandmodule: true
   // startupmodule: true
   module.exports = debugmodule;
 
