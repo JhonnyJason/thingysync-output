@@ -1,6 +1,6 @@
 {
   "name": "thingysync",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Small helper tool to help syncronisation of our thingies using git",
   "main": "index.js",
   "scripts": {
