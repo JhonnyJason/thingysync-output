@@ -1,6 +1,6 @@
 {
   "name": "thingysync",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Small helper tool to help syncronisation of our thingies using git",
   "main": "index.js",
   "scripts": {
@@ -21,10 +21,10 @@
   },
   "homepage": "https://github.com/JhonnyJason/thingysync-output/#readme",
   "dependencies": {
-    "chalk": "^2.4.2",
+    "chalk": "^3.0.0",
     "clui": "0.3.6",
     "gitmodules-file-handler": "^0.1.1",
-    "meow": "^5.0.0",
-    "simple-git": "^1.129.0"
+    "meow": "^6.1.0",
+    "simple-git": "^1.132.0"
   }
 }
