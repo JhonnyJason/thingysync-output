@@ -25,6 +25,6 @@
     "clui": "0.3.6",
     "gitmodules-file-handler": "^0.1.1",
     "meow": "^6.1.0",
-    "simple-git": "^1.132.0"
+    "simple-git": "^3.16.0"
   }
 }
